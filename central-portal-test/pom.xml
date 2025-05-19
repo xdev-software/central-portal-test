@@ -190,7 +190,7 @@
 						<version>0.7.0</version>
 						<extensions>true</extensions>
 						<configuration>
-							<serverId>sonatype-central-portal</serverId>
+							<publishingServerId>sonatype-central-portal</publishingServerId>
 							<autoPublish>true</autoPublish>
 							<waitUntil>published</waitUntil>
 						</configuration>
