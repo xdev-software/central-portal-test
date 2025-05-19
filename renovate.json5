@@ -4,7 +4,7 @@
   "packageRules": [
     {
       "description": "Ignore project internal dependencies",
-      "packagePattern": "^software.xdev:central-portal-test",
+      "packagePattern": "^com.xdev-software:central-portal-test",
       "datasources": [
         "maven"
       ],

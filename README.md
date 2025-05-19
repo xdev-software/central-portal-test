@@ -1,4 +1,4 @@
-[![Latest version](https://img.shields.io/maven-central/v/software.xdev/central-portal-test?logo=apache%20maven)](https://mvnrepository.com/artifact/software.xdev/central-portal-test)
+[![Latest version](https://img.shields.io/maven-central/v/com.xdev-software/central-portal-test?logo=apache%20maven)](https://mvnrepository.com/artifact/com.xdev-software/central-portal-test)
 [![Build](https://img.shields.io/github/actions/workflow/status/xdev-software/central-portal-test/check-build.yml?branch=develop)](https://github.com/xdev-software/central-portal-test/actions/workflows/check-build.yml?query=branch%3Adevelop)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=xdev-software_central-portal-test&metric=alert_status)](https://sonarcloud.io/dashboard?id=xdev-software_central-portal-test)
 
