@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1747722883004">
+    <module artifactId="central-portal-test" groupId="com.xdev-software" version="1.0.0"/>
+    <files>
+        <file path="src/main/java/software/xdev/test/Calculator.java" result="NOOP"/>
+    </files>
+</licensePluginReport>
