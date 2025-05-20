@@ -133,7 +133,7 @@ jobs:
         gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
 
     - name: Publish to Central Portal
-      run: ../mvnw -B deploy -Ppublish-sonatype-central-portal -DskipTests
+      run: ../mvnw -B deploy -P publish-sonatype-central-portal -DskipTests
       env:
         MAVEN_CENTRAL_USERNAME: ${{ secrets.SONATYPE_MAVEN_CENTRAL_PORTAL_USERNAME }}
         MAVEN_CENTRAL_TOKEN: ${{ secrets.SONATYPE_MAVEN_CENTRAL_PORTAL_TOKEN }}
