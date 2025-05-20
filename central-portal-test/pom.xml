@@ -4,21 +4,21 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>software.xdev</groupId>
-	<artifactId>template-placeholder</artifactId>
+	<groupId>com.xdev-software</groupId>
+	<artifactId>central-portal-test</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>template-placeholder</name>
-	<description>template-placeholder</description>
-	<url>https://github.com/xdev-software/template-placeholder</url>
+	<name>central-portal-test</name>
+	<description>central-portal-test</description>
+	<url>https://github.com/xdev-software/central-portal-test</url>
 
 	<scm>
-		<url>https://github.com/xdev-software/template-placeholder</url>
-		<connection>scm:git:https://github.com/xdev-software/template-placeholder.git</connection>
+		<url>https://github.com/xdev-software/central-portal-test</url>
+		<connection>scm:git:https://github.com/xdev-software/central-portal-test.git</connection>
 	</scm>
 
-	<inceptionYear>2023</inceptionYear>
+	<inceptionYear>2025</inceptionYear>
 
 	<organization>
 		<name>XDEV Software</name>
@@ -48,41 +48,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
-
-	<repositories>
-		<!-- The order of definitions matters. Explicitly defining central here 
-			to make sure it has the highest priority. -->
-		<repository>
-			<id>central</id>
-			<url>https://repo.maven.apache.org/maven2</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<!-- The order of definitions matters. Explicitly defining central here 
-			to make sure it has the highest priority. -->
-		<pluginRepository>
-			<id>central</id>
-			<url>https://repo.maven.apache.org/maven2</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
-
-	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>ossrh</id>
-			<url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement>
 
 	<build>
 		<pluginManagement>
@@ -176,7 +141,7 @@
 	</build>
 	<profiles>
 		<profile>
-			<id>ossrh</id>
+			<id>publish-sonatype-central-portal</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -220,16 +185,14 @@
 					</plugin>
 					
 					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.7.0</version>
+						<groupId>org.sonatype.central</groupId>
+						<artifactId>central-publishing-maven-plugin</artifactId>
+						<version>0.7.0</version>
 						<extensions>true</extensions>
 						<configuration>
-							<serverId>ossrh</serverId>
-							<nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-							<!-- Sometimes OSSRH is really slow -->
-							<stagingProgressTimeoutMinutes>30</stagingProgressTimeoutMinutes>
-							<autoReleaseAfterClose>true</autoReleaseAfterClose>
+							<publishingServerId>sonatype-central-portal</publishingServerId>
+							<autoPublish>true</autoPublish>
+							<waitUntil>published</waitUntil>
 						</configuration>
 					</plugin>
 				</plugins>

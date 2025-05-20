@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>software.xdev</groupId>
-		<artifactId>template-placeholder-root</artifactId>
+		<groupId>com.xdev-software</groupId>
+		<artifactId>central-portal-test-root</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>template-placeholder-demo</artifactId>
+	<artifactId>central-portal-test-demo</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -31,8 +31,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>software.xdev</groupId>
-			<artifactId>template-placeholder</artifactId>
+			<groupId>com.xdev-software</groupId>
+			<artifactId>central-portal-test</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
